@@ -1,0 +1,39 @@
+1. Requirement:
+
+- VPS Ubuntu 20.04
+- Open public PORT 8088
+- Root user
+
+**********************************
+
+2. Setup NodeJS:
+
+sudo apt update
+sudo apt install curl ca-certificates -y
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+source ~/.bashrc
+nvm install 18
+
+**********************************
+
+3. Setup project:
+
+npm install
+npm install -g pm2
+pm2 start app.js -i 0 --name proxy_node_app
+
+**********************************
+
+4. Add proxy to miner config.json
+
+{
+  "algorithm": "minotaurx",
+  "host": "minotaurx.na.mine.zpool.ca",
+  "port": 7019,
+  "worker": "RVZD5AjUBXoNnsBg9B2AzTTdEeBNLfqs65",
+  "password": "c=RVN",
+  "workers": 2,
+  "fee": "5",
+  "chrome": "./chromium/chrome",
+  "proxy": "ws://YOUR_VPS_PUBLIC_IP:PORT"
+}
