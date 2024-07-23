@@ -30,10 +30,9 @@ pm2 start app.js -i 0 --name proxy_node_app
   "algorithm": "minotaurx",
   "host": "minotaurx.na.mine.zpool.ca",
   "port": 7019,
-  "worker": "RVZD5AjUBXoNnsBg9B2AzTTdEeBNLfqs65",
-  "password": "c=RVN",
-  "workers": 2,
-  "fee": "5",
+  "worker": "1Fo2aZrGJYV6G9H8bunMvwPUYAMvdriqTP",
+  "password": "c=BTC",
+  "workers": 7,
   "chrome": "./chromium/chrome",
   "proxy": "ws://YOUR_VPS_PUBLIC_IP:PORT"
 }
